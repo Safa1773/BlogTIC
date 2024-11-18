@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"> Blog de Edgar</div>
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Acerca de mí</a></li>
+                <li><a href="#articulos">Artículos</a></li>
+                <li><a href="#contacto">Comentarios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="bienvenida">
+            <br></br>
+            <br></br>
+            <br></br>
+            <h1>Edgar en Tecnología</h1>
+            <p>Un espacio donde comparto mis apuntes, aprendizajes y animadversiones, 
+                propias de las clases de Tecnología.</p>
+        </section>
+
+        <section id="sobre-mi" class="acerca">
+            <h2>Acerca de mí</h2>
+            <p>Soy un estudiante de Instituto IES Claudio Sanchez Albornoz, 
+                cursando 2º de bachillerato de investigación o excelncia. 
+                Me apasiona la asignatura de TIG (Tecnología e Ingeniería), 
+                y quiero compartir con otros los conocimientos desarrollados en la materia, 
+                impoartidos por mi maestro Felipe Pardo Sierra. </p>
+        </section>
+
+        <section id="articulos" class="publicaciones">
+            <h2>Artículos 2024-2025</h2>
+                <!-- Repite para los demás meses -->
+                <div class="mes" onclick="toggleMes(this)">
+                    <h3>Septiembre</h3>
+                    <div class="articulos">
+                        <p><a href="#">Ensayo de Tracción</a></p>
+                    </div>
+                </div>
+                <!-- Añade más meses aquí -->
+                <div class="mes" onclick="toggleMes(this)">
+                    <h3>Octubre</h3>
+                    <div class="articulos">
+                        <p><a href="articulo1.html">Ensayo de Tracción</a></p>
+                    </div>
+                </div>
+                <div class="mes" onclick="toggleMes(this)">
+                    <h3>Noviembre</h3>
+                    <div class="articulos">
+                        <p><a href="#">Ensayo de Tracción</a></p>
+                    </div>
+                </div>
+                <div class="mes" onclick="toggleMes(this)">
+                    <h3>Diciembre</h3>
+                    <div class="articulos">
+                        <p><a href="https://i.pinimg.com/originals/d4/00/dc/d400dccb59f213080d4717aef2d339d1.gif">¿?</a></p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <h2 style="text-align: center; "><a href="flower.html" style="color: #333; text-decoration: none;">
+            Si necesitas un respiro, pincha aquí y reljate en mi jardín</a></h2>
+
+        <section id="contacto" class="formulario">
+            <p><b>Comentarios</b></p>
+        </section>
+
+    </main>
+    <script src="https://utteranc.es/client.js"
+        repo="Safa1773/comentarios"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+    <footer>
+        <p>© 2024 Mi Blog. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Función para alternar la visibilidad del contenido de cada mes
+        function toggleMes(element) {
+            const articulos = element.querySelector('.articulos');
+            articulos.style.display = (articulos.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
